@@ -1,0 +1,49 @@
+/* Mention Notification Styles */
+.mention-notification {
+    background-color: #2c2c2c;
+    border-left: 4px solid #e67e22;
+    margin: 10px 0;
+    padding: 12px 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: mention-fade-in 0.3s ease-in-out;
+}
+
+.mention-notification strong {
+    color: #e67e22;
+    margin-right: 5px;
+}
+
+.mention-notification .timestamp {
+    color: #aaaaaa;
+    font-size: 0.9em;
+}
+
+.mention-notification .message-preview {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 500px;
+}
+
+.notification-mention {
+    background-color: rgba(230, 126, 34, 0.2);
+    border-left: 3px solid #e67e22;
+}
+
+@keyframes mention-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

@@ -1,0 +1,67 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+ 
+    padding: 0;
+    overflow: hidden;
+}
+html {
+    background: url(../../../bg-main.avif) no-repeat center center fixed;
+    background-size: cover;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(3px);
+    background-color: rgba(24, 23, 23, 0.904);
+}
+
+iframe {
+    border: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+/* top */
+#top {
+    height: 14%;
+    overflow: hidden;
+    
+}
+@media screen and (max-width: 768px) {
+    #top{
+        height:19%;
+        
+    }
+}
+
+/* midd */
+#middle {
+display: flex;
+height: 70%;
+}
+
+
+#bottom {
+    height: 10%;
+}
+
+.backbutton {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #333;
+}
+
+.backbutton:hover {
+    background-color: #e0e0e0;
+}

@@ -1,0 +1,196 @@
+/* Base styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #5a8dd6;
+    --secondary-color: #adb5bd;
+    --success-color: #48c774;
+    --danger-color: #f14668;
+    --light-bg: #343a4000;
+    --light-text: #f8f9fa;
+    --dark-bg: #212529;
+    --dark-text: #f8f9fa;
+    --border-color: #495057;
+    --input-bg: #2c3034;
+    --table-stripe: rgba(255, 255, 255, 0.05);
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  line-height: 1.4;
+  padding: 10px;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+h2, h3 {
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 0.4rem;
+  vertical-align: middle;
+  border-top: 1px solid var(--border-color);
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-stripe);
+}
+
+.filter-table, .stats-table, .new-filter-table {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.filter-categories, .filter-stats, .filter-search, .new-filter-section, .bulk-actions, .filter-help {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--light-bg);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"], select {
+  padding: 0.4rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: var(--light-text);
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #3a5a80;
+}
+
+.delete-button input[type="submit"] {
+  background-color: var(--danger-color);
+}
+
+.delete-button input[type="submit"]:hover {
+  background-color: #bd2130;
+}
+
+.filtersubmit {
+  text-align: right;
+}
+
+label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.3rem;
+}
+
+.filter-categories ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-categories a {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.filter-categories a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Mobile-first responsive layout */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  
+  th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  tr {
+    border: 1px solid var(--border-color);
+    margin-bottom: 0.5rem;
+    padding: 0.3rem;
+  }
+  
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+  
+  td:before {
+    position: absolute;
+    left: 0.4rem;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  
+  .filter-table td:nth-of-type(1):before { content: "Filter ID:"; }
+  .filter-table td:nth-of-type(2):before { content: "Match:"; }
+  .filter-table td:nth-of-type(3):before { content: "Replace:"; }
+  
+  input[type="text"], select {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  body {
+    max-width: 95%;
+  }
+}
+
+@media (min-width: 993px) {
+  body {
+    max-width: 90%;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,209 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tagline {
+  font-style: italic;
+  color: #aaa;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.stat-box {
+  background: #1e1e1e;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+.cards-container {
+  display: inline;
+}
+
+.card {
+  background: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 60px;
+
+}
+
+.card h2 {
+  margin-top: 0;
+text-align: center;
+  color: #30ff1d;
+}
+
+.rules {
+  list-style: none;
+  padding-left: 0;
+}
+
+.rules li {
+  margin-bottom: 0.5rem;
+}
+
+.chatroom-mock {
+  background: #0e0e0e;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.chat-bubble {
+  background: #2c2c2c;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.chat-input {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  background: #333;
+  color: white;
+}
+
+.chat-input button {
+  padding: 0.5rem 1rem;
+  background: #f9a825;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+.primary-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hidden-link {
+  margin-top: 1rem;
+  display: block;
+  color: #66bb6a;
+}
+.cards-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.icon-card {
+  background: #1e1e2f;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: 0.3s;
+}
+.contact-section {
+  margin-top: 2em;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.1em;
+  border-radius: 12px;
+  color: #ccc;
+}
+
+.contact-section a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+.icon-card:hover {
+  background: #292942;
+  transform: scale(1.05);
+}
+
+.icon-link {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-link i {
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon-link:hover i {
+  transform: scale(1.2);
+}
+
+.hidden-link {
+  color: #aaa;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+.welcome-section.welcome-about {
+  background: rgba(30, 30, 30, 0.95);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
+}
+
+.welcome-section.welcome-about h2 {
+  color: #00ffd0;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.welcome-section.welcome-about p {
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.welcome-section.welcome-about .mutlak {
+  font-weight: bold;
+  color: #ff4081;
+  font-style: italic;
+}

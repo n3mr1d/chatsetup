@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    color: #fff;
+    min-height: 100vh;
+	background: url(../../../bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.144), rgba(26, 26, 26, 0.241), #2a2a2a3f);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#danchat-title{
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#chatters{
+    font-size: 0.9rem;
+    font-weight: 500;
+padding-top: 30px;
+    color: #e2e2e2;
+    text-align: center;
+}
+
+#login-form{
+    align-items: center;
+    margin: 0 auto;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    backdrop-filter: blur(3px);
+}
+
+.form-group {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+.form-group i {
+    background-color: rgba(255, 255, 255, 0.15);
+padding:14.5px;
+}
+#input_nickname, #password_nickname {
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 2% 2% 2% 0%;
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 13px 15px;
+border-bottom-right-radius: 10px;
+border-top-right-radius: 10px;
+border:none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 2px rgba(0, 63, 80, 0.5);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #4f83ff, #3b5fe2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 87, 87, 0.2);
+    border-left: 4px solid #ff5757;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 20px;
+    width:100%;
+
+}
+
+.error-icon {
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.error-icon svg {
+    fill: #ff5757;
+}
+
+.error-text {
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.color-select {
+    margin-top: 0.5rem;
+}
+
+.color-select label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #e2e2e2;
+}
+
+.color-select select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.system-info {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+#system_protocols {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #4f83ff;
+}
+
+.rules.warning {
+    color: #ff6b6b;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.rules.description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #e2e2e2;
+}
+#captcha{
+    margin: 0px;
+    width: 100%;
+    display: inline;
+}
+#container-captcha{
+    display: inline-block;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #captcha {
+display: inline;
+    }
+  }
+.members-only {
+    color: #ff9f43;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    padding: 10px;
+    background-color: rgba(255, 159, 67, 0.1);
+    border-radius: 6px;
+    border-left: 3px solid #ff9f43;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+}

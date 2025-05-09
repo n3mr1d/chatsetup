@@ -1,0 +1,165 @@
+/* Error page styles */
+body{
+  background-color: #222;
+}
+*{
+    overflow: hidden;
+}
+.error-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: transparent;
+  border-radius: 8px;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.error-icon {
+  font-size: 48px;
+  color: #ff5555;
+  margin-bottom: 20px;
+}
+
+.error-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ff5555;
+}
+
+.error-message {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.backbutton {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.backbutton:hover {
+  background-color: #555;
+}
+
+.setup-link {
+  display: inline-block;
+  background-color: #333;
+  color: #ccc;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.setup-link:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.error-timestamp {
+  margin-top: 20px;
+  color: #888;
+  font-size: 12px;
+}
+/* Fatal Error Styles */
+.fatal-error-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-left: 5px solid #ff3333;
+}
+
+.fatal-error-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ff3333;
+}
+
+.fatal-error-code {
+  display: inline-block;
+  background-color: #333;
+  color: #ff5555;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.fatal-error-details {
+  background-color: #222;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 20px 0;
+  text-align: left;
+  border-left: 3px solid #666;
+}
+
+.fatal-error-details p {
+  margin: 10px 0;
+  color: #ddd;
+}
+
+.fatal-error-message {
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+.fatal-error-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.fatal-error-timestamp {
+  margin-top: 20px;
+  color: #777;
+  font-size: 12px;
+}
+
+.fatal-error-debug {
+  margin-top: 40px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: left;
+  border-top: 2px dashed #555;
+}
+
+.fatal-error-debug h3 {
+  color: #ffcc00;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.fatal-error-debug pre {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  color: #aaa;
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  border-left: 3px solid #444;
+}
+
+/* Dark mode specific adjustments */

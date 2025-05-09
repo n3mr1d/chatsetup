@@ -1,0 +1,140 @@
+body {
+    font-family: sans-serif;
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light default text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.admin-login {
+    background-color: #2d2d2d; /* Darker container background */
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adjusted shadow for dark theme */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #444; /* Subtle border */
+}
+
+.admin-login h2 {
+    margin-bottom: 25px;
+    color: #e0e0e0; /* Light heading color */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #b0b0b0; /* Lighter label color */
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555; /* Darker border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: #3a3a3a; /* Dark input background */
+    color: #e0e0e0; /* Light input text color */
+}
+
+.form-group input::placeholder { /* Style placeholder text */
+    color: #888;
+}
+
+.form-group input:focus {
+    border-color: #4a90e2; /* Brighter focus border color */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.3); /* Adjusted focus shadow */
+    background-color: #404040; /* Slightly lighter background on focus */
+}
+
+/* Style CAPTCHA */
+#captcha_image {
+    display: block;
+    margin: 10px auto 15px;
+    border: 1px solid #555; /* Darker border */
+    border-radius: 4px;
+    background-color: #fff; /* Keep captcha background light for readability */
+}
+#captcha_input {
+     width: 100%;
+    padding: 12px;
+    border: 1px solid #555; /* Darker border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    background-color: #3a3a3a; /* Dark input background */
+    color: #e0e0e0; /* Light input text color */
+}
+#captcha_input::placeholder { /* Style placeholder text */
+    color: #888;
+}
+#captcha_input:focus {
+    border-color: #4a90e2; /* Brighter focus border color */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.3); /* Adjusted focus shadow */
+    background-color: #404040; /* Slightly lighter background on focus */
+}
+
+
+.form-actions {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-admin-login {
+    background-color: #4a90e2; /* Adjusted button color */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-admin-login:hover {
+    background-color: #357abd; /* Darker hover state */
+}
+
+.login-links,
+.language-select {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.login-links a,
+.language-select a {
+    color: #6caeff; /* Brighter link color */
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.login-links a:hover,
+.language-select a:hover {
+    text-decoration: underline;
+}
+
+.language-select p {
+    margin-bottom: 5px;
+    color: #a0a0a0; /* Lighter paragraph text */
+}

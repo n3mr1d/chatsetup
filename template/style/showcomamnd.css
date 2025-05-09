@@ -1,0 +1,113 @@
+/* Modern styling for command list */
+.commands-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #272727;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.commands-container h3 {
+    color: #4da6ff;
+    margin-top: 0;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e9ecef;
+    font-size: 1.5rem;
+}
+
+.command-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/* Control buttons styling */
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-item button {
+    background-color: #2c5282;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-item button:hover {
+    background-color: #3a6ea5;
+}
+
+.nav-item button i {
+    margin-right: 8px;
+}
+
+@media (max-width: 600px) {
+    .control-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-item {
+        margin: 5px 0;
+        width: 100%;
+    }
+    
+    .nav-item button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.command-list li {
+    color: white;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+}
+
+.command-list li:last-child {
+    border-bottom: none;
+}
+
+.command-list code {
+    background-color: #363636;
+    color: #e74c3c;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 100px;
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .commands-container {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .command-list li {
+        padding: 8px 0;
+    }
+    
+    .command-list code {
+        min-width: 80px;
+    }
+}

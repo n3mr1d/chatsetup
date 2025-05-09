@@ -1,0 +1,34 @@
+body.init {
+    background-color: #222;
+    color: #eee;
+}
+
+body.init input[type="text"],
+body.init input[type="password"] {
+    background-color: #333;
+    color: #eee;
+    border: 1px solid #444;
+}
+
+body.init table {
+    color: #eee;
+}
+
+body.init a {
+    color: #4af;
+}
+
+body.init a:hover {
+    color: #6cf;
+}
+
+body.init input[type="submit"] {
+    background-color: #333;
+    color: #eee;
+    border: 1px solid #444;
+}
+
+body.init input[type="submit"]:hover {
+    background-color: #444;
+}
+

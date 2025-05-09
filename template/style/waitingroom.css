@@ -1,0 +1,88 @@
+/* Waiting Room Styles - Dark Mode */
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h2 {
+    color: #4da6ff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+p {
+    margin: 15px 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 20px 0;
+}
+
+form {
+    margin: 15px 0;
+}
+
+button, input[type="submit"] {
+    background-color: #2c5282;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #3a6ea5;
+}
+
+#exitbutton {
+    background-color: #a02c2c;
+    margin-top: 10px;
+}
+
+#exitbutton:hover {
+    background-color: #c13c3c;
+}
+
+.nav-item.logout {
+    margin: 20px 0;
+}
+
+#rules {
+    background-color: #252525;
+    border-left: 4px solid #4da6ff;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 0 4px 4px 0;
+}
+
+#rules h2 {
+    margin-top: 0;
+    color: #4da6ff;
+}
+
+/* Style for user nicknames */
+.user-style {
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    button, input[type="submit"] {
+        width: 100%;
+    }
+}
