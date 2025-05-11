@@ -380,8 +380,7 @@ function send_init(): void
 	echo '<tr><td>'._('Superadmin Password:').'</td><td><input type="password" name="supass" size="15" autocomplete="new-password"></td></tr>';
 	echo '<tr><td>'._('Confirm Password:').'</td><td><input type="password" name="supassc" size="15" autocomplete="new-password"></td></tr>';
 	echo '</table></td></tr><tr><td><br>'.submit(_('Initialise Chat')).'</td></tr></table></form>';
-	echo '<p id="changelang">'._('Change language:');
-	echo'</p>'.credit();
+	
 	print_end();
 }
 

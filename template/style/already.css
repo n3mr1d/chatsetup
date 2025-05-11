@@ -1,0 +1,51 @@
+body {
+	background-color: #121212;
+	color: #e0e0e0;
+	font-family: Arial, sans-serif;
+}
+
+.setup-container {
+	background-color: #1e1e1e;
+	border-radius: 8px;
+	padding: 20px;
+	margin: 20px auto;
+	max-width: 600px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2, h3 {
+	color: #ffffff;
+}
+
+.setup-message {
+	margin: 15px 0;
+	padding: 10px;
+	background-color: #2d2d2d;
+	border-radius: 4px;
+}
+
+.setup-actions {
+	margin-top: 20px;
+}
+
+input[type="submit"] {
+	background-color: #3a3a3a;
+	color: #ffffff;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #4a4a4a;
+}
+
+a {
+	color: #4d9cf6;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
